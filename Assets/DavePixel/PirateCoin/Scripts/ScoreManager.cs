@@ -8,8 +8,8 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;
     public int targetScore = 20;          
     public TextMeshProUGUI scoreText;     
-    public GameObject winPanel;           
-
+    public GameObject winPanel;
+    public bool hasWon = false;
     void Awake()
     {
        
@@ -36,6 +36,8 @@ public class ScoreManager : MonoBehaviour
         if (score >= targetScore)
         {
             Debug.Log("YOU WIN!");
+
+            hasWon = true;
 
             if (winPanel != null)
             {

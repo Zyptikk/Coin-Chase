@@ -20,6 +20,8 @@ public class PlayerDeath : MonoBehaviour
 
     public void Die()
     {
+        if (ScoreManager.Instance.hasWon) return;
+
         if (isDead) return;
         isDead = true;
 
